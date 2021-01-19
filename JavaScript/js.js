@@ -8,6 +8,7 @@
 */
 
 const btn = document.querySelector("button");
+let curColor = document.querySelector("#currentColor");
 
 btn.addEventListener("click", () => {
     //Randomly Generating an RGB Color.
@@ -19,7 +20,8 @@ btn.addEventListener("click", () => {
     //Assigning colorChanger to "rng" rgb.
     const colorChanger = `rgb(${r}, ${g}, ${b})`;
     //Assigning colorChanger to "rng" rgb.
-
+    let curRgb = `rgb (${r}, ${g}, ${b},)`
+    curColor.innerHTML = curRgb;
     //Applying color style to the body.
     document.body.style.background = colorChanger;
 });
